@@ -226,23 +226,7 @@
 
     gtag('config', 'UA-136525688-1');
     </script>
-    <font size="1"> </font>
-    <script>
-    var url = location.href;
 
-    if (url.indexOf('?') != -1) {
-        var ary1 = url.split('?');
-        var resultBox = document.getElementById("384882884713725117")
-
-        if (ary1[1] == "package=1m") {
-            resultBox.innerHTML = "您选择了：1个月的套餐，一共需要支付 88 人民币（12.99美金）";
-        } else if (ary1[1] == "package=3m") {
-            resultBox.innerHTML = "您选择了：<strong>3个月</strong>的套餐，一共需要支付<strong> 121 人民币</strong>（17.97美金）";
-        } else if (ary1[1] == "package=12m") {
-            resultBox.innerHTML = "您选择了：12个月的套餐，一共需要支付 321 人民币（47.88美金）";
-        }
-    }
-    </script>
     <script>
     var STATIC_BASE = '//cdn1.editmysite.com/';
     var ASSETS_BASE = '//cdn2.editmysite.com/';
@@ -308,7 +292,9 @@
                                         <font size="6">选择支付方式</font>
                                     </h2>
                                     <div>
-                                        <div id="384882884713725117" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"></div>
+                                        <div id="notification" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml">
+                                            <font size="1">
+                                        </div>
                                     </div>
                                     <div class="wsite-spacer" style="height:50px;"></div>
                                     <div>
@@ -372,6 +358,27 @@
             </div>
         </div>
     </div>
+        <script>
+    var url = location.href;
+    console.log("A");
+    if (url.indexOf('?') != -1) {
+        var ary1 = url.split('?');
+        console.log("B");
+        var resultBox = document.getElementById("notification");
+        console.log("C");
+        if (ary1[1] == "package=1m") {
+            resultBox.innerHTML = "您选择了：1个月的套餐，一共需要支付 88 人民币（12.99美金）";
+            console.log("1");
+        } else if (ary1[1] == "package=3m") {
+            resultBox.innerHTML = "您选择了：3个月的套餐，一共需要支付 121 人民币（17.97美金）";
+            console.log("2");
+
+        } else if (ary1[1] == "package=12m") {
+            resultBox.innerHTML = "您选择了：12个月的套餐，一共需要支付 321 人民币（47.88美金）";
+            console.log("3");
+        }
+    }
+    </script>
 </body>
 
 </html>
