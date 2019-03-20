@@ -219,35 +219,30 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136525688-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'UA-136525688-1');
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136525688-1');
     </script>
-
     <font size="1"> </font>
+    <script>
+    var url = location.href;
 
-	<script>
+    if (url.indexOf('?') != -1) {
+        var ary1 = url.split('?');
+        var resultBox = document.getElementById("384882884713725117")
 
-	var url = location.href;
-
-	if(url.indexOf('?')!=-1)
-	{
-	  var ary1 = url.split('?');
-	  var resultBox = document.getElementById("384882884713725117")
-
-	  if (ary1[1] == "package=1m") {
-	    resultBox.innerHTML = "您选择了：1个月的套餐，一共需要支付 88 人民币（12.99美金）";
-	  } else if (ary1[1] == "package=3m") {
-	    resultBox.innerHTML = "您选择了：<strong>3个月</strong>的套餐，一共需要支付<strong> 121 人民币</strong>（17.97美金）";
-	  } else if (ary1[1] == "package=12m"){
-	    resultBox.innerHTML = "您选择了：12个月的套餐，一共需要支付 321 人民币（47.88美金）";
-	  }
-	}
-
-	</script>
-
+        if (ary1[1] == "package=1m") {
+            resultBox.innerHTML = "您选择了：1个月的套餐，一共需要支付 88 人民币（12.99美金）";
+        } else if (ary1[1] == "package=3m") {
+            resultBox.innerHTML = "您选择了：<strong>3个月</strong>的套餐，一共需要支付<strong> 121 人民币</strong>（17.97美金）";
+        } else if (ary1[1] == "package=12m") {
+            resultBox.innerHTML = "您选择了：12个月的套餐，一共需要支付 321 人民币（47.88美金）";
+        }
+    }
+    </script>
     <script>
     var STATIC_BASE = '//cdn1.editmysite.com/';
     var ASSETS_BASE = '//cdn2.editmysite.com/';
@@ -256,9 +251,7 @@
     <script src="./选择支付 - 黑白网络_files/jquery.min.js"></script>
     <script type="text/javascript" src="./选择支付 - 黑白网络_files/stl.js"></script>
     <script src="./选择支付 - 黑白网络_files/main.js"></script>
-
     <script type="text/javascript" src="./选择支付 - 黑白网络_files/stl.js"></script>
-
 </head>
 
 <body class="header-page wsite-page-index full-width-body-off header-overlay-on alt-nav-off wsite-theme-light fade-in vsc-initialized affix" style="min-height: 100%; position: relative; height: auto !important; ">
@@ -353,7 +346,7 @@
                                     <div style="text-align:center;">
                                         <div style="height: 10px; overflow: hidden;"></div>
                                         <a class="wsite-button wsite-button-small wsite-button-highlight" href="http://blackwhite.mikecrm.com/YNLUTg8">
-                                            <span class="wsite-button-inner" onclick="ga('send', 'event', 'pay_fill_document', 'click', 'fill_pay_document')" >我已经支付完成</span>
+                                            <span class="wsite-button-inner" onclick="ga('send', 'event', 'pay_fill_document', 'click', 'fill_pay_document')">我已经支付完成</span>
                                         </a>
                                         <div style="height: 10px; overflow: hidden;"></div>
                                     </div>
